@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Aplicación de Flask</title>
+    </head>
+    <body>
+        <h1>Workshop de Flask!</h1>
+        {% if contenido != "" %}
+            <p>Valores ingresados!</p>
+            <p>
+                Tu nombre es {{ contenido["nombre"] }}<br>
+                Tu misión es {{ contenido["mision"] }}<br>
+                Tu color favorito es {{ contenido["color"] }}
+            </p>
+            <p>Los nombres de todos los caballeros de la mesa redonda son:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Número</th>
+                        <th>Caballero</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for i in contenido["caballeros"] %}
+                    <tr>
+                        <td>{{ loop.index }}</td>
+                        <td>{{ i }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        {% endif %}
+        <p>Ingresa algunos valores en el formulario:</p>
+        <form action="{{ url_for('home') }}" method="POST" autocomplete="off">
+            <label for="nombre">¿Cuál es tu nombre?</label><br>
+            <input type="text" id="nombre" name="nombre"><br><br>
+            <label for="mision">¿Cuál es tu misión?</label><br>
+            <input type="text" id="mision" name="mision"><br><br>
+            <label for="color">¿Cuál es tu color favorito?</label><br>
+            <input type="text" id="color" name="color"><br><br>
+            <input type="submit" value="¡Enviar!">
+        </form>
+    </body>
+</html>
