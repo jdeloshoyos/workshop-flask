@@ -1,6 +1,7 @@
 
 # WORKSHOP DEPARTAMENTO DE INFORMÁTICA BIOMÉDICA
 ## DESARROLLO DE APPS WEB CON PYTHON / FLASK
+## (c) 2021, Jaime de los Hoyos M., Clínica Alemana de Santiago
 
 Este repo contiene el ejemplo completo trabajado en el workshop de desarrollo de apps web con Python y Flask, para futura referencia.
 
