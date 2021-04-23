@@ -1,6 +1,0 @@
-Variable de entorno para modo dev de servidor integrado Flask:
-$env:FLASK_ENV="development"
-
-Docker build/run:
-docker build --tag flask-workshop .
-docker run --name flask-workshop --rm -p 5010:5010 flask-workshop
